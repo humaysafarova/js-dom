@@ -5,10 +5,10 @@ $(document).ready(function () {
 
 
 
-$('h2').click(function (e) {
-    e.preventDefault();
-    $('h2').html(1234);
-});
+// $('h2').click(function (e) {
+//     e.preventDefault();
+//     $('h2').html(1234);
+// });
 
 
 $('.btn').click(function (e) { 
@@ -20,4 +20,10 @@ $('.btn').click(function (e) {
         }
     }
     a($('input').val())
+});
+
+
+$(`.btn`).click(function (e) { 
+    e.preventDefault();
+    
 });
