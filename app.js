@@ -1,37 +1,36 @@
 "use strict";
 $(document).ready(function () {
-    $(`.btn`).click(function (e) { 
-        e.preventDefault();
-        
-        const inputVal = $('input').val().trim();
-        const $List = $('#list');
 
-        $List.empty();
+  
+  $(`.btn`).click(function (e) { 
+    e.preventDefault();
 
-        if (inputVal == " ") {
-            console.log("Enter something!");
-            return;
-        }
+    const inputVal = $(`input`).val().trim();
+    const $List = $(`#list`);
 
-        const num = Number.parseInt(inputVal);
-        if(Number.isNaN(num)) {
-            return 0;
-        
-          if(num <= 0) {
-            $List.append("<li>Please enter a positive number!</li>");
-          } else {
-            const repeatedNum = (num + " ").repeat(num).trim();
-            $List.append(`<li>${repeatedNum}</li>`);
-          }
-        } else { 
-            $List.append(`<li>${inputVal}</li>`);
-          }
+    $List.empty();
 
-          $("#userInput").val("");
+    if( inputVal == " ") {
+      console.log("Please enter something!");
+      return;
+    }
 
+    const num = Number.parseInt(inputVal);
 
+    if ( !Number.isNaN(num) ) {
+      if ( num <= 0 ) {
+        $List.append("<li>Please enter a positive number!</li>");
+      } else {
+        const repeatedNum = ( num + " ").repeat(num).trim();
+        $List.append(`<li>${repeatedNum}</li>`);
+      }
+    } else {
+      $List.append(`<li>${inputVal}</li>`);
+    }
 
-    });
+    $(`input`).val();
+  });
+});
     
 
 
@@ -40,7 +39,6 @@ $(document).ready(function () {
 
 
 
-});
 
 
 
@@ -66,4 +64,35 @@ $(document).ready(function () {
 //     e.preventDefault();
     
 // });
+
+
+
+// $(`.btn`).click(function (e) { 
+//   e.preventDefault();
+  
+//   const inputVal = $('input').val().trim();
+//   const $List = $('#list');
+
+//   $List.empty();
+
+//   if (inputVal == " ") {
+//       console.log("Enter something!");
+//       return;
+//   }
+
+//   const num = Number.parseInt(inputVal);
+//   if(Number.isNaN(num)) {
+//       return 0;
+  
+//     if(num <= 0) {
+//       $List.append("<li>Please enter a positive number!</li>");
+//     } else {
+//       const repeatedNum = (num + " ").repeat(num).trim();
+//       $List.append(`<li>${repeatedNum}</li>`);
+//     }
+//   } else { 
+//       $List.append(`<li>${inputVal}</li>`);
+//     }
+
+//     $("#userInput").val("");
 
