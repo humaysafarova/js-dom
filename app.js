@@ -1,34 +1,28 @@
 "use strict";
-$(document).ready(function () {
-
-  
-  $(`.btn`).click(function (e) { 
-    e.preventDefault();
-
+$(document).ready(function() {
+  $(`.btn`).click(function() {
     const inputVal = $(`input`).val().trim();
     const $List = $(`#list`);
 
-    $List.empty();
-
-    if( inputVal == " ") {
+    if (inputVal === "") {
       console.log("Please enter something!");
       return;
     }
 
     const num = Number.parseInt(inputVal);
-
-    if ( !Number.isNaN(num) ) {
-      if ( num <= 0 ) {
+    if (!Number.isNaN(num)) {
+      if (num <= 0) {
         $List.append("<li>Please enter a positive number!</li>");
       } else {
-        const repeatedNum = ( num + " ").repeat(num).trim();
-        $List.append(`<li>${repeatedNum}</li>`);
+        for (let i = 0; i < num; i++) {
+          $List.append(`<li>${num}</li>`); 
+        }
       }
     } else {
       $List.append(`<li>${inputVal}</li>`);
     }
 
-    $(`input`).val();
+    $(`input`).val("");
   });
 });
     

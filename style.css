@@ -31,10 +31,15 @@ body .box .btn {
   border-radius: 15px;
   margin: 8px 0;
 }
+body ul {
+  padding: 0 25px;
+}
 body ul li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  flex-flow: column wrap;
   padding: 10px;
-  border-radius: 5px solid #5f6d79;
+  border: 3px solid #626b76;
+  margin-top: 20px;
+  border-radius: 20px;
 }/*# sourceMappingURL=style.css.map */
