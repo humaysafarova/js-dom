@@ -1,37 +1,30 @@
 "use strict";
-$(document).ready(function() {
-  $(`.btn`).click(function() {
-    const inputVal = $(`input`).val().trim();
-    const $List = $(`#list`);
+$(document).ready(function () {
 
-    if (inputVal === "") {
-      console.log("Please enter something!");
-      return;
-    }
 
-    const num = Number.parseInt(inputVal);
-    if (!Number.isNaN(num)) {
-      if (num <= 0) {
-        $List.append("<li>Please enter a positive number!</li>");
-      } else {
-        for (let i = 0; i < num; i++) {
-          $List.append(`<li>${num}</li>`); 
-        }
-      }
-    } else {
-      $List.append(`<li>${inputVal}</li>`);
-    }
-
-    $(`input`).val("");
-  });
 });
+
+
+
     
 
 
 
 
 
+// $('.btn').on('click', function() {
+//     const inputVal = $('input[type="text"]').val().trim();
+//     const $List = $('#list');
+    
+//     if (inputVal === "") {
+//         console.log("Please enter something!");
+//         return;
+//     }
+    
 
+//     $List.append(`<li>${inputVal}</li>`);
+//     $('input[type="text"]').val("");
+// });
 
 
 
@@ -58,35 +51,120 @@ $(document).ready(function() {
 //     e.preventDefault();
     
 // });
-
-
-
-// $(`.btn`).click(function (e) { 
-//   e.preventDefault();
   
-//   const inputVal = $('input').val().trim();
-//   const $List = $('#list');
 
-//   $List.empty();
 
-//   if (inputVal == " ") {
-//       console.log("Enter something!");
-//       return;
+// 11111111111 , 22222222
+
+// $(`.btn`).click(function() {
+//   const inputVal = $(`input`).val().trim();
+//   const $List = $(`#list`);
+
+//   if (inputVal === "") {
+//     console.log("Please enter something!");
+//     return;
 //   }
 
 //   const num = Number.parseInt(inputVal);
-//   if(Number.isNaN(num)) {
-//       return 0;
-  
-//     if(num <= 0) {
+//   if (!Number.isNaN(num)) {
+//     if (num <= 0) {
 //       $List.append("<li>Please enter a positive number!</li>");
 //     } else {
-//       const repeatedNum = (num + " ").repeat(num).trim();
-//       $List.append(`<li>${repeatedNum}</li>`);
+//       for (let i = 0; i < num; i++) {
+//         $List.append(`<li>${num}</li>`); 
+//       }
 //     }
-//   } else { 
+//   } else {
+//     $List.append(`<li>${inputVal}</li>`);
+//   }
+
+//   $(`input`).val("");
+// });
+
+
+// 5555555 , 666666
+
+// $(`.btn`).click(function() {
+//   const inputVal = $(`input`).val().trim();
+//   const $List = $(`#list`);
+
+//   if (inputVal === "") {
+//     console.log("Please enter something!");
+//     return;
+//   }
+
+//   const num = Number.parseInt(inputVal);
+//   if (!Number.isNaN(num)) {
+//     if (num <= 0) {
+//       $List.append("<li>Please enter a positive number!</li>");
+//     } else {
+//         $List.append(`<li>${num}</li>`); 
+//     }
+//   } else {
+//     $List.append(`<li>${inputVal}</li>`);
+//   }
+
+//   $(`input`).val("");
+// });
+
+
+
+// 333333
+
+// $(`.btn`).click(function() {
+//   const inputVal = $(`input`).val().trim();
+//   const $List = $(`#list`);
+
+//   if (inputVal === "") {
+//     console.log("Please enter something!");
+//     return;
+//   }
+
+//   const num = Number.parseInt(inputVal);
+//   if (!Number.isNaN(num)) {
+//     if (num <= 0) {
+//       $List.append("<li>Please enter a positive number!</li>");
+//     } else {
+//         $List.append(`<li>${num}</li>`); 
+//     }
+//   } else {
+//     $List.append(`<li>${inputVal}</li>`);
+//   }
+
+//   $(`input`).val("");
+// });
+
+// ve _main.sass da ul padding verririk 220px. li-ye display: block text-align:center 
+
+// 44444
+
+//  $(`.btn`).click(function() {
+//   const inputVal = $(`input`).val().trim();
+//   const $List = $(`#list`);
+
+//   if (inputVal === "") {
+//     console.log("Please enter something!");
+//     return;
+//   }
+
+  
+//   if (/\d/.test(inputVal) && /[a-zA-ZəöüçşğƏÖÜÇŞĞ]/.test(inputVal)) {
+//     $List.append(`<li>${inputVal}</li>`);
+//   } 
+ 
+//   else {
+//     const num = Number(inputVal);
+//     if (!isNaN(num)) {
+//       if (num <= 0) {
+//         $List.append("<li>Please enter a positive number!</li>");
+//       } else {
+//         $List.append(`<li>${num}</li>`);
+//       }
+//     } 
+    
+//     else {
 //       $List.append(`<li>${inputVal}</li>`);
 //     }
+//   }
 
-//     $("#userInput").val("");
-
+//   $(`input`).val("").focus();

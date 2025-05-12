@@ -31,11 +31,16 @@ body .box .btn {
   border-radius: 15px;
   margin: 8px 0;
 }
+body .box .btn:hover {
+  background-color: #cacaca;
+}
 body ul {
   padding: 0 25px;
+  width: 220px;
 }
 body ul li {
-  display: flex;
+  display: block;
+  text-align: center;
   align-items: center;
   flex-flow: column wrap;
   padding: 10px;
